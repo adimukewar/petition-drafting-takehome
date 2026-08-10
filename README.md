@@ -33,8 +33,8 @@ day, the better.
 
 ## Deliverables
 
-1. **The system**, in a private GitHub repository shared with shuo@tryalma.ai,
-   with clear setup instructions.
+1. **The system**, in a private GitHub repository shared with **shuo@tryalma.ai**
+   and **johnlemmon@tryalma.ai**, with clear setup instructions.
    - It should be repeatable for other cases.
    - It should be usable by a non-technical attorney — assume legal knowledge,
      not AI or coding knowledge.
@@ -46,7 +46,14 @@ day, the better.
    and what would you change with more time?
 4. **A coding-agent usage doc**: a one-page summary of how you used a coding
    agent.
-5. **A recording, 5 minutes or less**, showing the system running.
+5. **A recording, 5 minutes or less**, showing the system running. Narrate what
+   we are looking at.
+
+## Before you send it
+
+Play back the recording from the link you are about to share and confirm it
+plays, has audio, and runs under five minutes. This is our most commonly missed
+item.
 
 ## Constraints
 
