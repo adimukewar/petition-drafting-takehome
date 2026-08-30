@@ -1,0 +1,14 @@
+[project]
+name = "petition-drafting"
+version = "0.1.0"
+description = "EB-1A petition drafting support tooling for legal case review"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+petition-drafting = "petition_drafting.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

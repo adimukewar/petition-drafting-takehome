@@ -86,3 +86,36 @@ the system is part of the exercise.
 
 Ambiguity in this brief is sometimes deliberate, so tell us how you resolved it.
 A reasonable answer is preferred over the "right" answer here.
+
+## Project setup (UV)
+
+This repository uses `uv` for package management and execution.
+
+1. Install `uv` if needed:
+   - `curl -LsSf https://astral.sh/uv/install.sh | sh`
+2. From the repo root, create and sync the environment:
+   - `uv sync`
+3. Generate drafts for both cases:
+   - `uv run petition-drafting --cases cases --out outputs`
+4. Optional Hugging Face enhancement:
+   - `PETITION_MODEL=google/flan-t5-base uv run petition-drafting --cases cases --out outputs`
+   - If no model is configured, the system uses the deterministic local template path instead.
+
+## How the system works
+
+The pipeline does three things:
+
+1. Parses the raw case corpus into a structured fact model.
+2. Scores evidence quality and legal relevance so weak evidence can be downweighted or flagged.
+3. Produces a supporting statement draft intended for attorney review.
+
+This keeps the output repeatable and grounded in the facts in the case folder rather than relying on a single opaque model call.
+
+## Output locations
+
+- `outputs/case-a-marwah-supporting-statement.md`
+- `outputs/case-b-bergqvist-supporting-statement.md`
+
+## Notes on legal framing
+
+This version intentionally avoids overstating weak evidence. For example, pending patent applications are treated carefully, paid placement articles are treated as weak sources, and internal awards are not described as external recognition without qualification.
